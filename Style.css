@@ -7,6 +7,7 @@ img {display: block;
 
 .dark {
     background-color: #535559;
+    color: white;
 }
 
 .lightgrey {
@@ -19,4 +20,11 @@ img {display: block;
 
 input{
     width: 50px;
+}
+
+.chatroom-main {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    display: block;
 }
