@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <title>PlaySheet Form</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0" >
 </head>
 
 <body>
-    <img src="images/dices.png" width="200" alt="dices">
-    <img src="images/yahtzee.png" width="200" alt="Yahtzee">
-    <div>
-        <a href="index.html">Main</a>
-        <a href="SignUp.html">Sign Up</a>
-        <a href="SignIn.html">Sign In</a>
-        <a href="#">Game</a>
+    <img class="image" src="images/dices.png" alt="dices">
+    <img class="image" src="images/yahtzee.png" alt="Yahtzee">
+    <div class="menu">
+        <a class="menu-item" href="index.html">Main</a>
+        <a class="menu-item" href="SignIn.html">Sign In</a>
+        <a class="menu-item" href="SignUp.html">Sign Up</a>
+        <a class="menu-item" href="#">Game</a>
     </div>
     <h4>Upper Section</h1>
         <table border="1">
             <tr>
                 <th class="dark">Minimum required for bonus</th>
-                <th class="dark">How to score</th>
+                <th class="dark hide">How to score</th>
                 <th class="lightgrey">Player2</th>
                 <th class="lightgrey">Player1</th>
                 <th class="lightgrey">Player3</th>
@@ -29,7 +30,7 @@
 
             <tr>
                 <td>Aces ⚀ = 1 </td>
-                <td>Count and add only aces</td>
+                <td class="hide">Count and add only aces</td>
                 <td><input class="grey" type="number" name="dice" min=0></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -38,7 +39,7 @@
 
             <tr>
                 <td>Twos ⚁ = 2 </td>
-                <td>Count and add only Twos</td>
+                <td class="hide">Count and add only Twos</td>
                 <td><input class="grey" type="number" name="dice" step="2"></td>
                 <td><input type="number" name="dice" step="2"></td>
                 <td><input class="grey" type="number" name="dice" step="2"></td>
@@ -47,7 +48,7 @@
 
             <tr>
                 <td>Threes ⚂ = 3 </td>
-                <td>Count and add only Threes</td>
+                <td class="hide">Count and add only Threes</td>
                 <td><input class="grey" type="number" name="dice" step="3"></td>
                 <td><input type="number" name="dice" step="3"></td>
                 <td><input class="grey" type="number" name="dice" step="3"></td>
@@ -56,7 +57,7 @@
 
             <tr>
                 <td>Fours ⚃ = 4 </td>
-                <td>Count and add only Fours</td>
+                <td class="hide">Count and add only Fours</td>
                 <td><input class="grey" type="number" name="dice" step="4"></td>
                 <td><input type="number" name="dice" step="4"></td>
                 <td><input class="grey" type="number" name="dice" step="4"></td>
@@ -65,7 +66,7 @@
 
             <tr>
                 <td>Fives ⚄ = 5 </td>
-                <td>Count and add only Fives</td>
+                <td class="hide">Count and add only Fives</td>
                 <td><input class="grey" type="number" name="dice" step="5"></td>
                 <td><input type="number" name="dice" step="5"></td>
                 <td><input class="grey" type="number" name="dice" step="5"></td>
@@ -74,7 +75,7 @@
 
             <tr>
                 <td>Sixes ⚅ = 6 </td>
-                <td>Count and add only Sixes</td>
+                <td class="hide">Count and add only Sixes</td>
                 <td><input class="grey" type="number" name="dice" step="6"></td>
                 <td><input type="number" name="dice" step="6"></td>
                 <td><input class="grey" type="number" name="dice" step="6"></td>
@@ -82,7 +83,8 @@
             </tr>
 
             <tr>
-                <td colspan="2" class="dark">Sum</td>
+                <td class="dark">Sum</td>
+                <td class="hide dark"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
@@ -90,7 +92,8 @@
             </tr>
 
             <tr>
-                <td colspan="2" class="dark">Bonus</td>
+                <td class="dark">Bonus</td>
+                <td class="hide dark"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
                 <td><input class="lightgrey" type="number" name="dice" step="6"></td>
@@ -101,7 +104,7 @@
 
             <tr>
                 <td>3 of a Kind</td>
-                <td>Add total of all dice</td>
+                <td class="hide">Add total of all dice</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -109,7 +112,7 @@
             </tr>
             <tr>
                 <td>4 of a Kind</td>
-                <td>Add total of all dice</td>
+                <td class="hide">Add total of all dice</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -118,7 +121,7 @@
 
             <tr>
                 <td>Full house</td>
-                <td>Score 25</td>
+                <td class="hide">Score 25</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -127,7 +130,7 @@
 
             <tr>
                 <td>Sm. straight</td>
-                <td>Score 30</td>
+                <td class="hide">Score 30</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -136,7 +139,7 @@
 
             <tr>
                 <td>Lg. straight</td>
-                <td>Score 40</td>
+                <td class="hide">Score 40</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -145,7 +148,7 @@
 
             <tr>
                 <td>YAHTZEE 5 of a kind</td>
-                <td>Score 50</td>
+                <td class="hide">Score 50</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -154,7 +157,7 @@
 
             <tr>
                 <td>Chance</td>
-                <td>Score total of 1 dice</td>
+                <td class="hide">Score total of 1 dice</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -163,7 +166,7 @@
 
             <tr>
                 <td rowspan="2">Yatzee bonus</td>
-                <td>For each bonus</td>
+                <td class="hide">For each bonus</td>
                 <td><input class="grey" type="number" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -171,7 +174,7 @@
             </tr>
 
             <tr>
-                <td>Score for 100</td>
+                <td class="hide">Score for 100</td>
                 <td><input class="grey" type="text" name="dice"></td>
                 <td><input type="number" name="dice"></td>
                 <td><input class="grey" type="number" name="dice"></td>
@@ -180,7 +183,7 @@
 
             <tr>
                 <td class="dark">Total of Lower half</td>
-                <td class="dark">---></td>
+                <td class="dark hide">---></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
@@ -189,7 +192,7 @@
 
             <tr>
                 <td class="dark">Total of upper half</td>
-                <td class="dark">---></td>
+                <td class="dark hide">---></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
@@ -198,7 +201,7 @@
 
             <tr>
                 <td class="dark">Grand Total</td>
-                <td class="dark">---></td>
+                <td class="dark hide">---></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
                 <td><input class="lightgrey" type="number" name="dice"></td>
