@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(event) {
 
-    var message = document.getElementById("message-text");
+    /*var message = document.getElementById("message-text");
 
     console.log(message);
 
@@ -29,7 +28,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function areaRectangle (width, height) {
         return width*height;
+    }*/
+
+
+
+   // sum_upperhalf("sumuppercolumn1")
+    function sum_upperhalf(){
+        let listNum = document.getElementsByClassName("sumuppercolumn1");
+        var sum=0;
+        for(i=0;i<listNum.length;i++) {
+            sum = sum + listNum[i].value;
+            
+        }     
+        document.getElementById("sum1").value = sum.value;
+        console.log("awd");
+        
     }
 
-
-    });
+    
+    let listNum = document.getElementsByClassName("sumuppercolumn1");
+    for(i=0;i<listNum.length;i++) {
+        listNum[i].addEventListener("blur", sum_upperhalf);
+    }     
+    //sum_upperhalf("sumuppercolumn1"); 
