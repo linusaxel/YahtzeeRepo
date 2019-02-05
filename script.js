@@ -47,8 +47,22 @@ function updateSum() {
             sum = sum + parseInt(listNum[i].value);
         }
 
+<<<<<<< HEAD
         }
         document.getElementById("sum1").value = sum;
+=======
+   // sum_upperhalf("sumuppercolumn1")
+    function sum_upperhalf(){
+        let listNum = document.getElementsByClassName("sumuppercolumn1");
+        var sum=0;
+        for(i=0;i<listNum.length;i++) {
+            if (listNum[i].value != ""){
+                sum = sum + parseInt(listNum[i].value);
+            }
+        }     
+        document.getElementById("sum1").value = sum;
+        
+>>>>>>> d7eba4b741f74005d19049a6febbd201ce34b2cf
     }
     console.log("awd");
 }
