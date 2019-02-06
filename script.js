@@ -31,13 +31,20 @@ for (let i = 1; i <= 4; i++) {
 
 window.onload = function () {
     document.getElementById("rolldicebutton").addEventListener("click", rolldice);
-
+    
 }
 
 function rolldice() {
-    for (let i = 1; i <= 5; i++) {
-        if (!document.getElementById("checkbox" + i).checked == true) {
-            document.getElementById("diceroll" + i).value = Math.floor(Math.random() * 6) + 1;
+    if ($("#turn").val() <= 4 && $("#rollsLeft").val() > 0){
+        for (let i = 1; i <= 5; i++) {
+            if (!document.getElementById("checkbox" + i).checked == true) {
+                document.getElementById("diceroll" + i).value = Math.floor(Math.random() * 6) + 1;
+            }
+        }
+        $("#rollsLeft").val(parseInt($("#rollsLeft").val()) - 1);
+        if ($("#rollsLeft").val() == 0 && $("#turn").val() != 4) {
+            $("#rollsLeft").val(3);
+            $("#turn").val(parseInt($("#turn").val()) + 1);
         }
     }
 }

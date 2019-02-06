@@ -6,6 +6,7 @@
     <title>PlaySheet Form</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -194,6 +195,12 @@
 
         <br><br>
 
+        <div>
+            Turn: Player
+            <input type="text" id="turn" value="1" disabled>
+            Rolls left:
+            <input type="text" id="rollsLeft" value="3" disabled>
+        </div>
         <div id="dicerollbox">
             <div>
                 <input type="text" name="dicevalue" size="2" id="diceroll1">
@@ -218,7 +225,6 @@
     
             <button id="rolldicebutton">Roll Dice</button>
         </div>
-
         <script src="script.js"></script>
 </body>
 
