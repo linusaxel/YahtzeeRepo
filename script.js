@@ -45,6 +45,9 @@ function rolldice() {
         if ($("#rollsLeft").val() == 0 && $("#turn").val() != 4) {
             $("#rollsLeft").val(3);
             $("#turn").val(parseInt($("#turn").val()) + 1);
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById("checkbox" + i).checked = false;
+            }
         }
     }
 }
