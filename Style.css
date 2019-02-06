@@ -104,3 +104,23 @@ img {display: block;
     width: 30%;}
 
 }
+
+#guestbook {
+    border: solid 2px black;
+}
+
+#dicerollbox {
+    border: 2px solid black;
+    width: 70px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid black; 
+}
+

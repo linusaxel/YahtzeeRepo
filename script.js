@@ -1,77 +1,58 @@
-
-/*var message = document.getElementById("message-text");
-
-console.log(message);
-
-var oldText = message.innerHTML;
-var bla = oldText;
-console.log(oldText);
-
-message.innerHTML="This is another message";
-message.style.color = "004301";
- 
-document.body.style.backgroundColor = "#b8fcc7";
-
-var input = document.getElementById("input-box").value;
-
-console.log(input);
-
-var person = {
-    name: "Linus",
-    age: "24",
-    profession: "Software Developer"
-}
-
-console.log(person);
-
-console.log(areaRectangle(5, 6));
-
-function areaRectangle (width, height) {
-    return width*height;
-}*/
-
-
-/*for (i = 1; i <= 4; i++) {
-    let playerRolls = document.getElementsByClassName("player" + i +"_roll");
-    
-}*/
-
 function updateSum() {
     for (i = 1; i <= 4; i++) {
-        listNum = document.getElementsByClassName("player" + i +"_roll");
-        console.log("abc");
-        var sum = 0;
-        for (i = 0; i < listNum.length; i++) {
-        if (listNum[i].value != "") {
+        listNum = document.getElementsByClassName("player" + i + "_roll");
 
-            sum = sum + parseInt(listNum[i].value);
-        }
+        console.log("Player " + i)
+        console.log([...listNum][i].value);
 
-<<<<<<< HEAD
-        }
-        document.getElementById("sum1").value = sum;
-=======
-   // sum_upperhalf("sumuppercolumn1")
-    function sum_upperhalf(){
-        let listNum = document.getElementsByClassName("sumuppercolumn1");
-        var sum=0;
-        for(i=0;i<listNum.length;i++) {
-            if (listNum[i].value != ""){
-                sum = sum + parseInt(listNum[i].value);
-            }
-        }     
-        document.getElementById("sum1").value = sum;
-        
->>>>>>> d7eba4b741f74005d19049a6febbd201ce34b2cf
+        var sum = [...listNum].reduce((acc, currValue, currIndex, array) => {
+            console.log(currValue.value);
+
+            return parseInt(acc) + parseInt(currValue.value);
+
+        }, 0);
+
+        console.log(sum);
+
+        document.getElementById("sum" + i).value = sum;
     }
-    console.log("awd");
 }
 
-for (let i = 1; i <= 4; i++) {
-    let listNum = document.getElementsByClassName("player" + i +"_roll");
 
+
+
+for (let i = 1; i <= 4; i++) {
+    let listNum = document.getElementsByClassName("player" + i + "_roll");
     for (let j = 0; j < listNum.length; j++) {
         listNum[j].addEventListener("blur", updateSum);
     }
 }
-   
+
+
+window.onload = function () {
+    document.getElementById("rolldicebutton").addEventListener("click", rolldice);
+
+}
+
+function rolldice() {
+    for (let i = 1; i <= 5; i++) {
+        if (!document.getElementById("checkbox" + i).checked == true) {
+            document.getElementById("diceroll" + i).value = Math.floor(Math.random() * 6) + 1;
+        }
+    }
+}
+
+$(document).ready(function () {
+    $("#apibutton").click(function () {
+        $.ajax({
+            url: 'https://randomuser.me/api/',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                addAPIinfo(data);
+
+            }
+        });
+    });
+});
+

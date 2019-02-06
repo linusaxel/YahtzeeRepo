@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>PlaySheet Form</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <meta name = "viewport" content ="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -177,9 +177,9 @@
                 <td class="dark">Total of upper half</td>
                 <td class="dark hide">---></td>
                 <td><input id="sum1" class="lightgrey" type="number" name="dice"></td>
-                <td><input class="lightgrey" type="number" name="dice"></td>
-                <td><input class="lightgrey" type="number" name="dice"></td>
-                <td><input class="lightgrey" type="number" name="dice"></td>
+                <td><input id="sum2" class="lightgrey" type="number" name="dice"></td>
+                <td><input id="sum3" class="lightgrey" type="number" name="dice"></td>
+                <td><input id="sum4" class="lightgrey" type="number" name="dice"></td>
             </tr>
 
             <tr>
@@ -191,6 +191,33 @@
                 <td><input class="lightgrey" type="number" name="dice"></td>
             </tr>
         </table>
+
+        <br><br>
+
+        <div id="dicerollbox">
+            <div>
+                <input type="text" name="dicevalue" size="2" id="diceroll1">
+                <input type="checkbox" name="rollethisdice" id="checkbox1">
+            </div>
+            <div>
+                <input type="text" name="dicevalue" size="2" id="diceroll2">
+                <input type="checkbox" name="rollethisdice" id="checkbox2">
+            </div>
+            <div>
+                <input type="text" name="dicevalue" size="2" id="diceroll3">
+                <input type="checkbox" name="rollethisdice" id="checkbox3">
+            </div>
+            <div>
+                <input type="text" name="dicevalue" size="2" id="diceroll4">
+                <input type="checkbox" name="rollethisdice" id="checkbox4">
+            </div>
+            <div>
+                <input type="text" name="dicevalue" size="2" id="diceroll5">
+                <input type="checkbox" name="rollethisdice" id="checkbox5">
+            </div>
+    
+            <button id="rolldicebutton">Roll Dice</button>
+        </div>
 
         <script src="script.js"></script>
 </body>
