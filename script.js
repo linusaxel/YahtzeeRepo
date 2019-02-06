@@ -1,32 +1,32 @@
 function updateSum() {
-    for (i = 1; i <= 4; i++) {
-        listNum = document.getElementsByClassName("player" + i + "_roll");
+    for (let i = 1; i <= 4; i++) {
 
-        console.log("Player " + i)
-        console.log([...listNum][i].value);
+        let listNum = document.getElementsByClassName("player" + i + "_roll");
 
-        var sum = [...listNum].reduce((acc, currValue, currIndex, array) => {
-            console.log(currValue.value);
+        var sum = 0;
 
-            return parseInt(acc) + parseInt(currValue.value);
+        for (let i = 0; i < listNum.length; i++) {
 
-        }, 0);
-
-        console.log(sum);
-
+            if (listNum[i].value != "") {
+                sum = sum + parseInt(listNum[i].value);
+            }
+        }
         document.getElementById("sum" + i).value = sum;
     }
+    console.log("awd");
 }
 
-
-
-
 for (let i = 1; i <= 4; i++) {
+
     let listNum = document.getElementsByClassName("player" + i + "_roll");
+
     for (let j = 0; j < listNum.length; j++) {
+
         listNum[j].addEventListener("blur", updateSum);
     }
 }
+
+
 
 
 window.onload = function () {
