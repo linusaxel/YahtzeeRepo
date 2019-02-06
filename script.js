@@ -37,6 +37,9 @@ window.onload = function () {
 function rolldice() {
     if ($("#turn").val() <= 4 && $("#rollsLeft").val() > 0){
         for (let i = 1; i <= 5; i++) {
+            document.getElementById("checkbox" + i).disabled = false;
+        }
+        for (let i = 1; i <= 5; i++) {
             if (!document.getElementById("checkbox" + i).checked == true) {
                 document.getElementById("diceroll" + i).value = Math.floor(Math.random() * 6) + 1;
             }
@@ -47,6 +50,7 @@ function rolldice() {
             $("#turn").val(parseInt($("#turn").val()) + 1);
             for (let i = 1; i <= 5; i++) {
                 document.getElementById("checkbox" + i).checked = false;
+                document.getElementById("checkbox" + i).disabled = true;
             }
         }
     }
